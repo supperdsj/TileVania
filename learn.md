@@ -5,3 +5,4 @@
 * 对于高速物体将rigidbody的collision detection 设置为 Continuous
 * 利用 myCollider2d.IsTouchingLayers(LayerMask.GetMask("Ground") 获取当前 collider是否与特定layer接触
 * sprite editor 中可编辑物理轮廓
+* 可为 Collider 添加 Physic Material 设置摩擦力和弹力
