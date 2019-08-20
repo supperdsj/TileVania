@@ -1,3 +1,7 @@
 * 使用 Tilemap 自动编辑地形
 * 使用 Ruletiles 自动关联生成地形贴图
 * 使用 Tilemap Collider + Composite Collider 为 Tilemap 生成 Collider    
+* 使用 UnityStandardAssets.CrossPlatformInput 监听输入
+* 对于高速物体将rigidbody的collision detection 设置为 Continuous
+* 利用 myCollider2d.IsTouchingLayers(LayerMask.GetMask("Ground") 获取当前 collider是否与特定layer接触
+* sprite editor 中可编辑物理轮廓
