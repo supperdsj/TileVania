@@ -9,3 +9,4 @@
 * 使用 Cinemachine 跟随对象/限制显示区域
 * 使用 Cinemachine 可关联对象使用 State Drive Camera 切换不同 Camera
 * Cinemachine 内设置 Noise 可以实现震动效果
+* 可使用 OnTriggerExit2D 来判断是否撞墙或者到达边缘
