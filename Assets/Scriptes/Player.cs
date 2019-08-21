@@ -44,9 +44,10 @@ public class Player : MonoBehaviour {
         if (!myFeet.IsTouchingLayers(LayerMask.GetMask("Ground"))) {
             return;
         }
+
         Debug.Log("can jump");
         if (CrossPlatformInputManager.GetButtonDown("Jump")) {
-            Vector2 jumpVelocity = new Vector2(0f,jumpSpeed);
+            Vector2 jumpVelocity = new Vector2(0f, jumpSpeed);
             myRigidbody.velocity += jumpVelocity;
             // myRigidbody.AddForce(jumpVelocity);
         }
@@ -54,16 +55,19 @@ public class Player : MonoBehaviour {
 
     void Climb() {
         if (!myFeet.IsTouchingLayers(LayerMask.GetMask("Climbing"))) {
+            Debug.Log("nc");
             myAniamtor.SetBool("isClimbing", false);
             myRigidbody.gravityScale = gravityScaleAtStart;
             return;
         }
+
         float controlThrow = CrossPlatformInputManager.GetAxis("Vertical"); // -1 ~ 1
         Vector2 climbVector = new Vector2(myRigidbody.velocity.x, controlThrow * climbingSpeed);
         myRigidbody.velocity = climbVector;
         myAniamtor.SetBool("isClimbing", Mathf.Abs(myRigidbody.velocity.y) > Mathf.Epsilon);
         myRigidbody.gravityScale = 0f;
     }
+
     void FlipSprite() {
         if (Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon) {
             transform.localScale = new Vector2(Mathf.Sign(myRigidbody.velocity.x), 1f);

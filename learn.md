@@ -6,3 +6,6 @@
 * 利用 myCollider2d.IsTouchingLayers(LayerMask.GetMask("Ground") 获取当前 collider是否与特定layer接触
 * sprite editor 中可编辑物理轮廓
 * 可为 Collider 添加 Physic Material 设置摩擦力和弹力
+* 使用 Cinemachine 跟随对象/限制显示区域
+* 使用 Cinemachine 可关联对象使用 State Drive Camera 切换不同 Camera
+* Cinemachine 内设置 Noise 可以实现震动效果
